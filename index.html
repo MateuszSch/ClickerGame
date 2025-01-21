@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click the Box Game</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqWg4geLl2IivI4zGKHxXgmEvYLBmJbHOSRTfzQF3I0V5"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-dark text-light">
+    <div id="gameArea" class="container text-center py-5">
+      <h1 class="display-4 mb-4">Click the Box Game</h1>
+      <img
+        id="box"
+        src="logo.jpg"
+        alt="Pyta team"
+        class="rounded-circle shadow-lg"
+        draggable="false"
+      />
+      <p class="mt-3">
+        <span id="clickCount" class="text-warning">0</span> clicks
+      </p>
+      <p>Click Power: <span id="lastClickValue">1</span></p>
+    </div>
+
+    <div id="notification" class="hidden"></div>
+
+    <div id="shop" class="container mt-5 text-center">
+      <h2 class="text-info">Shop</h2>
+      <div class="d-flex flex-wrap justify-content-center">
+        <div class="col-md-3 col-sm-6 mb-3">
+          <div class="shop-item bg-info text-white p-4 rounded-lg shadow">
+            <h3>Upgrade 1</h3>
+            <p>Multiplier: +1</p>
+            <button
+              class="btn btn-light"
+              upgradeCostMultiplier="1"
+              onclick="buyUpgrade(1, this)"
+            >
+              Buy for <span class="cost">100</span> clicks
+            </button>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-3">
+          <div class="shop-item bg-warning text-dark p-4 rounded-lg shadow">
+            <h3>Upgrade 2</h3>
+            <p>Multiplier: +3</p>
+            <button
+              class="btn btn-dark"
+              upgradeCostMultiplier="1"
+              onclick="buyUpgrade(3, this)"
+            >
+              Buy for <span class="cost">300</span> clicks
+            </button>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-3">
+          <div class="shop-item bg-success text-white p-4 rounded-lg shadow">
+            <h3>Upgrade 3</h3>
+            <p>Multiplier: +5</p>
+            <button
+              class="btn btn-light"
+              upgradeCostMultiplier="1"
+              onclick="buyUpgrade(5, this)"
+            >
+              Buy for <span class="cost">500</span> clicks
+            </button>
+          </div>
+        </div>
+
+        <!-- Nowa sekcja w sklepie -->
+        <div class="col-md-3 col-sm-6 mb-3">
+          <div class="shop-item bg-danger text-white p-4 rounded-lg shadow">
+            <h3>Upgrade 4</h3>
+            <p>Multiplier: +10</p>
+            <button
+              class="btn btn-light"
+              upgradeCostMultiplier="1"
+              onclick="buyUpgrade(10, this)"
+            >
+              Buy for <span class="cost">1000</span> clicks
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
